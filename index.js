@@ -11,8 +11,9 @@
  * getCohort({cohort: 3476, name: "Charlie"}); // 3476
  */
 export function getCohort(student) {
-  // TODO
+  return student.cohort
 }
+console.log(getCohort({cohort: 5621, name: "Charlie"}))
 
 /**
  * @typedef {{cohort: number, name: string}} Student
@@ -30,8 +31,13 @@ export function getCohort(student) {
  * sortStudents({cohort: 1, name: "Alice"}, {cohort: 2, name: "Alice"}); // {cohort: 1, name: "Alice"}
  */
 export function sortStudents(studentA, studentB) {
-  // TODO
+  if (studentA.name <= studentB.name) {
+    return studentA
+  } else {
+    return studentB
+  }
 }
+console.log(sortStudents({cohort: 1, name: "Alfred"}, {cohort: 1, name: "Alfredo"}))
 
 /**
  * @typedef {{color: string, icon: string}} Flag
