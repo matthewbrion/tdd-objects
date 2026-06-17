@@ -53,8 +53,9 @@ console.log(sortStudents({cohort: 1, name: "Alfred"}, {cohort: 1, name: "Alfredo
  * makeFlag("yellow", "triangle"); // { color: "yellow", icon: "triangle" }
  */
 export function makeFlag(color, icon) {
-  // TODO
+  return { color: color, icon: icon }
 }
+console.log(makeFlag("white", "red circle"))
 
 /**
  * @typedef {{value: number}} Count
