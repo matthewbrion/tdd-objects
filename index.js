@@ -70,8 +70,9 @@ console.log(makeFlag("white", "red circle"))
  * increment({value: -5}); // {value: -4}
  */
 export function increment(count) {
-  // TODO
+  return { value: count.value + 1 }
 }
+console.log(increment({value: 38}))
 
 /**
  * @typedef {{x: number, y: number}} Location
