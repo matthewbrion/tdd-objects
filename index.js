@@ -98,7 +98,7 @@ console.log(increment({value: 38}))
  *
  */
 export function getTaxicabDistance(from, to) {
-  // TODO
+  
 }
 
 /**
@@ -114,8 +114,13 @@ export function getTaxicabDistance(from, to) {
  * getHerbivores([{name: "Rabbit", isHerbivore: true}]); // [{name: "Rabbit", isHerbivore: true}]
  */
 export function getHerbivores(animals) {
-  // TODO
-}
+  let newArray = []
+  for (let i = 0; i < animals.length; i++) {
+    if (animals[i].isHerbivore == true)
+      newArray.push(animals[i])
+  } return newArray
+} 
+console.log(getHerbivores([{name: "Pterodactyl", isHerbivore: false}]))
 
 /**
  * @typedef {{name: string, isCarnivore: boolean}} Animal
@@ -130,8 +135,13 @@ export function getHerbivores(animals) {
  * getCarnivoreNames([{name: "Wolf", isCarnivore: true}]); // ["Wolf"]
  */
 export function getCarnivoreNames(animals) {
-  // TODO
+    let newArray = []
+  for (let i = 0; i < animals.length; i++) {
+    if (animals[i].isCarnivore == true)
+      newArray.push(animals[i].name)
+  } return newArray
 }
+console.log(getCarnivoreNames([{name: "Caterpillar", isCarnivore: false}, {name: "Velociraptor", isCarnivore: true}]))
 
 /**
  * @typedef {{name: string, quantity: number, price: number}} Item
