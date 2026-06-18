@@ -161,8 +161,12 @@ console.log(getCarnivoreNames([{name: "Caterpillar", isCarnivore: false}, {name:
  * getTotalCost([{name: "Notebook", quantity: 0, price: 5}]); // 0
  */
 export function getTotalCost(cart) {
-  // TODO
+  let total = 0
+  for (let i = 0; i < cart.length; i++) {
+    total += cart[i].quantity * cart[i].price
+  } return total
 }
+console.log(getTotalCost([{name: "Thermos", quantity: 9, price: 18.99}, {name: "Plush", quantity: 1, price: 24.99}, {name: "Fidget", quantity: 2, price: 7.50}]))
 
 /**
  * Zip is an operation that merges two arrays into a single object.
@@ -181,7 +185,11 @@ export function getTotalCost(cart) {
  * zip(["x"], ["x"]); // {x: "x"}
  */
 export function zip(keys, values) {
-  // TODO
+  const result = {};
+  for (let i = 0; i <= keys.length; i++) {
+    result[keys[i]] = values[i];
+  }
+  return result;
 }
 
 /**
@@ -197,5 +205,5 @@ export function zip(keys, values) {
  * countCharacters("aAa"); // {a: 2, A: 1}
  */
 export function countCharacters(word) {
-  // TODO
+  
 }
